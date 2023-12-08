@@ -25,4 +25,3 @@ public class QuestionsEntity {
     private String correctAnswer;
 }
 
-//ddfm
