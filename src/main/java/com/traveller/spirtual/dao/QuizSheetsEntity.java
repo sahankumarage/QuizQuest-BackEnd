@@ -5,6 +5,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -12,18 +13,16 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-public class QuestionsEntity {
+@Builder
+public class QuizSheetsEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-    private String descQuiz;
-    private String Answer1;
-    private String Answer2;
-    private String Answer3;
-    private String Answer4;
-    private String Answer5;
-    private String correctAnswer;
+    private Long quizSheetId;
+    private String sheetsSubject;
+    private String sheetLevel;
+    private String postedBy;
+    private int questions;
+
 
 
 }
-
