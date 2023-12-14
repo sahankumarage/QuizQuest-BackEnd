@@ -64,4 +64,8 @@ public class QuestionsService {
         return (List<QuestionsEntity>) questionsRepository.findAll();
     }
 
+    public void deleteQuestionsById(Long id){
+        questionsRepository.deleteById(id);
+    }
+
 }
