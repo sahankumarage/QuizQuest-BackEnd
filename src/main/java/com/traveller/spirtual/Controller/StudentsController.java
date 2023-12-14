@@ -12,6 +12,7 @@ import java.util.List;
 
 @CrossOrigin
 @RestController
+@RequestMapping("/api")
 public class StudentsController {
 
     @Autowired
@@ -26,5 +27,10 @@ public class StudentsController {
     public void enterStudent(@RequestBody StudentsEntity student){
         service.enterStudent(student);
 
+    }
+
+    @DeleteMapping("/deleteStudent/{id}")
+    public void deleteStudent(@PathVariable Long id) {
+        service.deleteStudentById(id);
     }
 }
