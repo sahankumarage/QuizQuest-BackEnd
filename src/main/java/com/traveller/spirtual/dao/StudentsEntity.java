@@ -26,6 +26,5 @@ public class StudentsEntity {
     private String alYear;
     private String alSubject;
 
-    @OneToOne(mappedBy = "students")
-    private QuizSheetsEntity sheets;
+
 }

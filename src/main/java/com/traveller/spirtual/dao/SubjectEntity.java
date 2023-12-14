@@ -2,23 +2,21 @@ package com.traveller.spirtual.dao;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
-import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Data
+@Entity
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
-@Builder
-public class QuizSheetsEntity {
+public class SubjectEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long quizSheetId;
-    private String sheetsSubject;
-    private String sheetLevel;
-    private String postedBy;
-    private int questions;
+    private Long subId;
+    private String subName;
+    private String masterSub;
+
+
 
 
 
