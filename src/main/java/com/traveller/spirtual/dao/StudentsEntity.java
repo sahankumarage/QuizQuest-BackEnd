@@ -18,6 +18,8 @@ public class StudentsEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
+    private String email;
+    private String password;
     private LocalDate dob;
     private String school;
     private String address;

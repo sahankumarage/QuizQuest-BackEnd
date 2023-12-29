@@ -36,6 +36,8 @@ public class QuizSheetService {
         quizRepository.save(quizSheetEntity);
     }
 
+    public void deleteQuizById(Long id){quizRepository.deleteById(id);}
+
 
 
 }

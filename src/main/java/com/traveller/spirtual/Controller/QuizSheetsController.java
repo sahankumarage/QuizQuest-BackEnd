@@ -29,6 +29,11 @@ public class QuizSheetsController {
 
     }
 
+    @DeleteMapping("/deleteQuizSheet/{id}")
+    public void deleteSheet(@PathVariable Long id){
+        service.deleteQuizById(id);
+    }
+
 
 
 

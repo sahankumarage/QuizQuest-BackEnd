@@ -27,6 +27,8 @@ public class StudentsService {
         StudentsEntity student = StudentsEntity.builder()
                 .id(studentDetails.getId())
                 .name(studentDetails.getName())
+                .email(studentDetails.getEmail())
+                .password(studentDetails.getPassword())
                 .dob(studentDetails.getDob())
                 .school(studentDetails.getSchool())
                 .address(studentDetails.getAddress())
