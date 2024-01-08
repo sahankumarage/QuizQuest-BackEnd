@@ -72,7 +72,7 @@ public class QuestionsService {
         questionsRepository.deleteById(id);
     }
 
-    public void updateQuestions(Long id, QuestionsEntity updateQuestions) {
+    public void updateQuestionsById(Long id, QuestionsEntity updateQuestions) {
         Optional<QuestionsEntity> optionalQuestions = questionsRepository.findById(id);
 
         if(optionalQuestions.isPresent()){
