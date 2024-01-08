@@ -6,6 +6,8 @@ import com.traveller.spirtual.dao.QuizSheetsEntity;
 import com.traveller.spirtual.dto.Questions;
 import com.traveller.spirtual.dto.QuizSheets;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -32,6 +34,13 @@ public class QuizSheetsController {
     @DeleteMapping("/deleteQuizSheet/{id}")
     public void deleteSheet(@PathVariable Long id){
         service.deleteQuizById(id);
+    }
+
+    @PutMapping("/updateSheet/{id}")
+    public ResponseEntity<Void> updateSheetById(@PathVariable Long id,@RequestBody QuizSheets updateSheet){
+        service.updateSheetById(id, updateSheet);
+        return new ResponseEntity<>(HttpStatus.OK);
+
     }
 
 
