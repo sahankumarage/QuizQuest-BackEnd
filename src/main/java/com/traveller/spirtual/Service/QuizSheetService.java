@@ -30,7 +30,6 @@ public class QuizSheetService {
                 .sheetsSubject(quizSheets.getSheetsSubject())
                 .sheetLevel(quizSheets.getSheetLevel())
                 .postedBy(quizSheets.getPostedBy())
-                .questions(quizSheets.getQuestions())
                 .build();
 
         quizRepository.save(quizSheetEntity);

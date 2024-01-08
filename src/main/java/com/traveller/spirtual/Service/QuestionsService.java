@@ -2,6 +2,7 @@ package com.traveller.spirtual.Service;
 
 import com.traveller.spirtual.Repository.QuestionsRepository;
 import com.traveller.spirtual.dao.QuestionsEntity;
+import com.traveller.spirtual.dao.StudentsEntity;
 import com.traveller.spirtual.dto.Questions;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,9 @@ import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
+
+import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
 @Slf4j
@@ -66,6 +70,25 @@ public class QuestionsService {
 
     public void deleteQuestionsById(Long id){
         questionsRepository.deleteById(id);
+    }
+
+    public void updateQuestions(Long id, QuestionsEntity updateQuestions) {
+        Optional<QuestionsEntity> optionalQuestions = questionsRepository.findById(id);
+
+        if(optionalQuestions.isPresent()){
+            QuestionsEntity questions = optionalQuestions.get();
+            questions.setDescQuiz(updateQuestions.getDescQuiz() != null ? updateQuestions.getDescQuiz():questions.getDescQuiz());
+            questions.setAnswer1(updateQuestions.getAnswer1()!= null ? updateQuestions.getAnswer1():questions.getAnswer1());
+            questions.setAnswer2(updateQuestions.getAnswer2()!= null ? updateQuestions.getAnswer2():questions.getAnswer2());
+            questions.setAnswer3(updateQuestions.getAnswer3()!= null ? updateQuestions.getAnswer3():questions.getAnswer3());
+            questions.setAnswer4(updateQuestions.getAnswer4()!= null ? updateQuestions.getAnswer4():questions.getAnswer4());
+            questions.setAnswer5(updateQuestions.getAnswer5()!= null ? updateQuestions.getAnswer5():questions.getAnswer5());
+            questions.setCorrectAnswer(updateQuestions.getCorrectAnswer()!= null ? updateQuestions.getCorrectAnswer():questions.getCorrectAnswer());
+
+            questionsRepository.save(questions);
+
+        }
+
     }
 
 }

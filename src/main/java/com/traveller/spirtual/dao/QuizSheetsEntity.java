@@ -1,6 +1,5 @@
 package com.traveller.spirtual.dao;
 
-import com.traveller.spirtual.dao.QuestionsEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -21,7 +20,7 @@ public class QuizSheetsEntity {
     private String sheetsSubject;
     private String sheetLevel;
     private String postedBy;
-    private int questions;
+
 
 
 }

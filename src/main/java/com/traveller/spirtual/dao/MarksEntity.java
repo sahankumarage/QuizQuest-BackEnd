@@ -17,6 +17,7 @@ public class MarksEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long markId;
+    private int marks;
 
 
 
