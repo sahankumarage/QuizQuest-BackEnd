@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 public class Marks {
 
     private int markId;
+    private int marks;
 
 
 

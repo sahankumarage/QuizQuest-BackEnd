@@ -6,6 +6,8 @@ import com.traveller.spirtual.dao.Students;
 import com.traveller.spirtual.dao.StudentsEntity;
 import com.traveller.spirtual.dto.QuizSheets;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -27,6 +29,12 @@ public class StudentsController {
     public void enterStudent(@RequestBody StudentsEntity student){
         service.enterStudent(student);
 
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Void> updateStudentById(@PathVariable Long id, @RequestBody StudentsEntity updatedStudent) {
+        service.updateStudentById(id, updatedStudent);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @DeleteMapping("/deleteStudent/{id}")

@@ -30,11 +30,12 @@ public class QuizSheetService {
                 .sheetsSubject(quizSheets.getSheetsSubject())
                 .sheetLevel(quizSheets.getSheetLevel())
                 .postedBy(quizSheets.getPostedBy())
-                .questions(quizSheets.getQuestions())
                 .build();
 
         quizRepository.save(quizSheetEntity);
     }
+
+    public void deleteQuizById(Long id){quizRepository.deleteById(id);}
 
 
 

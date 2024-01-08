@@ -5,4 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface QuizSheetRepository extends CrudRepository<QuizSheetsEntity,Long> {
 
+
+
 }

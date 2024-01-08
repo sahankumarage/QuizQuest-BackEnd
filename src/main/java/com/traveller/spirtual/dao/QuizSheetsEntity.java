@@ -6,10 +6,12 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
+@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-@Entity
 @Builder
 public class QuizSheetsEntity {
     @Id
@@ -18,7 +20,6 @@ public class QuizSheetsEntity {
     private String sheetsSubject;
     private String sheetLevel;
     private String postedBy;
-    private int questions;
 
 
 
