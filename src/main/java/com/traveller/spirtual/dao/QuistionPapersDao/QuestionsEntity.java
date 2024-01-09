@@ -1,6 +1,6 @@
-package com.traveller.spirtual.dto;
+package com.traveller.spirtual.dao.QuistionPapersDao;
 
-import jakarta.persistence.Column;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -8,8 +8,11 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Questions {
-    private int id;
+@Entity
+public class QuestionsEntity {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String descQuiz;
     private String Answer1;
     private String Answer2;
@@ -17,4 +20,6 @@ public class Questions {
     private String Answer4;
     private String Answer5;
     private String correctAnswer;
+
+
 }

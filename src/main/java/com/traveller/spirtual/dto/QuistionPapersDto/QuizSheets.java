@@ -1,26 +1,19 @@
-package com.traveller.spirtual.dao;
+package com.traveller.spirtual.dto.QuistionPapersDto;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
-@Entity
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class QuizSheetsEntity {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long quizSheetId;
+public class QuizSheets {
+    private int id;
     private String sheetsSubject;
     private String sheetLevel;
     private String postedBy;
-
-
+    private int questions;
 
 }

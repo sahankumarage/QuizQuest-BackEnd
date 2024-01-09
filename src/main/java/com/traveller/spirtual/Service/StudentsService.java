@@ -1,8 +1,6 @@
 package com.traveller.spirtual.Service;
 
 import com.traveller.spirtual.Repository.StudentsRepository;
-import com.traveller.spirtual.dao.QuestionsEntity;
-import com.traveller.spirtual.dao.Students;
 import com.traveller.spirtual.dao.StudentsEntity;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;

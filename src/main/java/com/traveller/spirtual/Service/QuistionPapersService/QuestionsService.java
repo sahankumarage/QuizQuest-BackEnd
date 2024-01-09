@@ -1,9 +1,8 @@
-package com.traveller.spirtual.Service;
+package com.traveller.spirtual.Service.QuistionPapersService;
 
-import com.traveller.spirtual.Repository.QuestionsRepository;
-import com.traveller.spirtual.dao.QuestionsEntity;
-import com.traveller.spirtual.dao.StudentsEntity;
-import com.traveller.spirtual.dto.Questions;
+import com.traveller.spirtual.Repository.QuistionPapersRepo.QuestionsRepository;
+import com.traveller.spirtual.dao.QuistionPapersDao.QuestionsEntity;
+import com.traveller.spirtual.dto.QuistionPapersDto.Questions;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -11,8 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-
-import static org.springframework.data.jpa.domain.AbstractPersistable_.id;
 
 @Service
 @Slf4j

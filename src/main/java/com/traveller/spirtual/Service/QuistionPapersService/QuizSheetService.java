@@ -1,12 +1,8 @@
-package com.traveller.spirtual.Service;
+package com.traveller.spirtual.Service.QuistionPapersService;
 
-import com.traveller.spirtual.Repository.QuestionsRepository;
-import com.traveller.spirtual.Repository.QuizSheetRepository;
-import com.traveller.spirtual.dao.QuestionsEntity;
-import com.traveller.spirtual.dao.QuizSheetsEntity;
-import com.traveller.spirtual.dao.StudentsEntity;
-import com.traveller.spirtual.dto.Questions;
-import com.traveller.spirtual.dto.QuizSheets;
+import com.traveller.spirtual.Repository.QuistionPapersRepo.QuizSheetRepository;
+import com.traveller.spirtual.dao.QuistionPapersDao.QuizSheetsEntity;
+import com.traveller.spirtual.dto.QuistionPapersDto.QuizSheets;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

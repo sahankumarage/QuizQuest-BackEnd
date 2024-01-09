@@ -1,6 +1,6 @@
-package com.traveller.spirtual.Repository;
+package com.traveller.spirtual.Repository.QuistionPapersRepo;
 
-import com.traveller.spirtual.dao.QuestionsEntity;
+import com.traveller.spirtual.dao.QuistionPapersDao.QuestionsEntity;
 import org.springframework.data.repository.CrudRepository;
 
 import java.util.List;

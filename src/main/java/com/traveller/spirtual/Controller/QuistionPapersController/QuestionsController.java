@@ -1,10 +1,9 @@
-package com.traveller.spirtual.Controller;
+package com.traveller.spirtual.Controller.QuistionPapersController;
 
 
-import com.traveller.spirtual.Service.QuestionsService;
-import com.traveller.spirtual.dao.QuestionsEntity;
-import com.traveller.spirtual.dao.StudentsEntity;
-import com.traveller.spirtual.dto.Questions;
+import com.traveller.spirtual.Service.QuistionPapersService.QuestionsService;
+import com.traveller.spirtual.dao.QuistionPapersDao.QuestionsEntity;
+import com.traveller.spirtual.dto.QuistionPapersDto.Questions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
